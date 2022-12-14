@@ -1,10 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
+import withCounter from './withCounter'
 
-const ClickCounter = () => {
-      const [count, setcount] = useState(0)
-      const handleCounter = ()=>{
-            setcount(count + 1)
-      }
+const ClickCounter = ({ count, handleCounter})=>{
+      
   return (
     <div>
       <button onClick={handleCounter}>You clicked me {count} times</button>
@@ -12,4 +10,4 @@ const ClickCounter = () => {
   )
 }
 
-export default ClickCounter
+export default withCounter(ClickCounter)

@@ -1,11 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
+import withCounter from './withCounter'
 
-const HoverCounter = () => {
-
-      const [count, setcount] = useState(0)
-      const handleCounter = ()=>{
-            setcount(count + 1)
-      }
+const HoverCounter = ({ count, handleCounter})=>{
 
   return (
     <div>
@@ -14,4 +10,4 @@ const HoverCounter = () => {
   )
 }
 
-export default HoverCounter
+export default withCounter(HoverCounter)
